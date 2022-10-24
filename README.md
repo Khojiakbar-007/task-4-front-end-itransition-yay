@@ -1,5 +1,7 @@
 # Client side, ReactJS Redux Login Registration
 
+### with client side validation
+
 ## Available Scripts
 
 In the project directory, you can run:
