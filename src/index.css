@@ -1,0 +1,23 @@
+.profile-container {
+    height          : 100vh;
+    width           : 100%;
+    background-color: rgba(255, 246, 246, 0.877);
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : center;
+}
+
+hr {
+    width: 100%;
+}
+
+.profile-heading {
+    margin-top: 3px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+}
