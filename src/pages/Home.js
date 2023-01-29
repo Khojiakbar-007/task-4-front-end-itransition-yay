@@ -2,6 +2,7 @@ import { Alert, Button } from "@mui/material";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
+import Users from "../components/Learning/Users";
 import { logOutAction } from "../redux/user/user.actions";
 
 class Home extends Component {
@@ -21,6 +22,7 @@ class Home extends Component {
           Log Out
         </Button>
         <br />
+        <Users />
         {/* <Button variant="outlined">Verify</Button> */}
       </div>
     );

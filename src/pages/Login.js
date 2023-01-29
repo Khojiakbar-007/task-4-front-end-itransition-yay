@@ -119,7 +119,7 @@ class Login extends React.Component {
             <Box sx={{ mt: 1 }}>
               <Autocomplete
                 freeSolo
-                options={this.props.registeredEmails}
+                options={[]}
                 renderInput={(params) => (
                   <TextField
                     {...params} ref={this.emailRef}
@@ -165,7 +165,6 @@ class Login extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  registeredEmails: state.user.registeredEmails,
   isSignedIn: state.user.isSignedIn,
   currentMessage: state.user.currentMessage,
 });

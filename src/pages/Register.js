@@ -12,7 +12,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import { Link as LinkRouter } from "react-router-dom";
+import { Link as LinkRouter, Redirect } from "react-router-dom";
 import { registerAction } from "../redux/user/user.actions";
 import { connect } from "react-redux";
 import { Alert } from "@mui/material";
@@ -26,6 +26,7 @@ class Register extends React.Component {
     this.passwordRef = React.createRef();
 
     this.state = {
+      name: "",
       email: "",
       password: "",
       blurredFields: [], // fields that lost focus
@@ -100,6 +101,8 @@ class Register extends React.Component {
 
   render() {
     console.log(this.state);
+    if (this.props.isSignedIn) return <Redirect to="/home" />;
+
     return (
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
@@ -158,8 +161,8 @@ class Register extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
+  isSignedIn: state.user.isSignedIn,
   currentMessage: state.user.currentMessage,
-  savedEmails: state.user.registeredEmails,
 });
 
 const mapDispatchToProps = (dispatch) => ({
